@@ -1,4 +1,3 @@
-package Classes_Objetos.consistencia;
 public class Program {
     public static void main(String[] args) {
         PersonagemGame personagem1 = new PersonagemGame(50, "Sonic");

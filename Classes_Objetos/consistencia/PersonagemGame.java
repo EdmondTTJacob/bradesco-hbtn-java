@@ -1,4 +1,3 @@
-package Classes_Objetos.consistencia;
 public class PersonagemGame {
     private int saudeAtual;
     private String nome;
