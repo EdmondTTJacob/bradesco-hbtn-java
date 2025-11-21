@@ -13,12 +13,12 @@ public class GerenciamentoDeContatos {
 
     public void adicionarContato(String nome, String telefone, String email) {
         if (contatos.containsKey(nome)) {
-            System.out.println("Erro: Contato com nome " + nome + " ja existe!");
+            System.out.println("Erro: Contato com nome " + nome + " já existe!");
             return;
         }
 
         if (emailsUtilizados.contains(email)) {
-            System.out.println("Erro: Email " + email + " ja esta em uso!");
+            System.out.println("Erro: Email " + email + " já está em uso!");
             return;
         }
 
@@ -53,7 +53,7 @@ public class GerenciamentoDeContatos {
             System.out.println("Telefones: " + contato.getTelefones());
             System.out.println("Emails: " + contato.getEmails());
         } else {
-            System.out.println("Contato " + nome + " nao encontrado.");
+            System.out.println("Contato " + nome + " não encontrado.");
         }
     }
 
@@ -65,7 +65,7 @@ public class GerenciamentoDeContatos {
             }
             System.out.println("Contato " + nome + " removido com sucesso!");
         } else {
-            System.out.println("Contato " + nome + " nao encontrado.");
+            System.out.println("Contato " + nome + " não encontrado.");
         }
     }
 
@@ -84,8 +84,8 @@ public class GerenciamentoDeContatos {
         System.out.println("\nRemovendo contato 'Carlos':");
         gerenciamento.removerContato("Carlos");
 
-        System.out.println("\nTentando remover contato 'Joao' que nao existe:");
-        gerenciamento.removerContato("Joao");
+        System.out.println("\nTentando remover contato 'João' que não existe:");
+        gerenciamento.removerContato("João");
 
         gerenciamento.exibirTodosContatos();
     }
