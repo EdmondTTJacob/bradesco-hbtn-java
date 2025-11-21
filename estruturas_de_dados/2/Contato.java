@@ -1,40 +1,47 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 public class Contato {
-    private String nome;
     private List<String> telefones;
     private Set<String> emails;
 
-    public Contato(String nome) {
-        this.nome = nome;
-        this.telefones = new ArrayList<>();
-        this.emails = new HashSet<>();
+
+    // Construtor
+    public Contato() {
+        telefones = new ArrayList<>();
+        emails = new HashSet<>();
     }
 
-    public String getNome() {
-        return nome;
-    }
 
+    // Adiciona um telefone
     public void adicionarTelefone(String telefone) {
         telefones.add(telefone);
     }
 
-    public void adicionarEmail(String email) {
-        emails.add(email);
+
+    // Adiciona um email
+    public boolean adicionarEmail(String email) {
+        if (!emails.contains(email)) {
+            emails.add(email);
+            return true;  // Email adicionado com sucesso
+        }
+        return false;  // Email duplicado
     }
 
+
+    // Exibe os detalhes do contato
+    public void exibirContato() {
+        System.out.println("Telefones: " + telefones);
+        System.out.println("Emails: " + emails);
+    }
+
+
+    // Verifica se o contato tem algum telefone
     public List<String> getTelefones() {
         return telefones;
     }
 
+
+    // Verifica se o contato tem algum email
     public Set<String> getEmails() {
         return emails;
-    }
-
-    @Override
-    public String toString() {
-        return "Nome: " + nome + "\nTelefones: " + telefones + "\nEmails: " + emails;
     }
 }
