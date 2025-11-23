@@ -5,3 +5,5 @@
 *.iml
 # Diretório de metadados do projeto
 .idea/
+# Ignorar todos os arquivos de classe compilados
+**/*.class
