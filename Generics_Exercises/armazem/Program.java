@@ -8,7 +8,7 @@ public class Program {
         Comida comida2 = new Comida("feijao", 80, 23.0);
         Comida comida3 = new Comida("pacoca", 165, 7.5);
 
-        Eletronico eletronico1 = new Eletronico("Smart TV LED 32 HD LG", 1452.55);
+         Eletronico eletronico1 = new Eletronico("Smart TV LED 32 HD LG", 1452.55);
         Eletronico eletronico2 = new Eletronico("Nintendo Switch", 2990);
 
         Armazem<Eletronico> armazem1 = new Armazem<>();
